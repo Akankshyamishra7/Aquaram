@@ -202,28 +202,28 @@ export default function AdminDashboardPage() {
   return (
     <div className="min-h-screen pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Admin Role Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-2xl glass-panel border border-cyan-500/20 mb-8">
-        <div className="flex items-center gap-3">
-          <div className="p-2.5 rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 sm:p-6 rounded-2xl glass-panel border border-cyan-500/20 mb-8">
+        <div className="flex items-start sm:items-center gap-3">
+          <div className="p-2.5 rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 shrink-0">
             <Shield className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-white flex items-center gap-2">
+            <h1 className="text-lg sm:text-xl font-bold text-white flex flex-wrap items-center gap-2">
               Aquaram Central Admin Console
-              <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-mono">
+              <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-mono">
                 {isAdmin ? 'Active SuperAdmin' : 'Viewing as Customer'}
               </span>
             </h1>
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-gray-400 mt-0.5">
               Manage inventory, live stock health, orders, discounts, and MongoDB records.
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2.5 shrink-0">
           <button
             onClick={handleSeedDatabase}
-            className="px-3.5 py-2 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold hover:border-cyan-400 flex items-center gap-1.5 transition-colors"
+            className="flex-1 sm:flex-initial px-3.5 py-2 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold hover:border-cyan-400 flex items-center justify-center gap-1.5 transition-colors"
           >
             <Database className="w-3.5 h-3.5" />
             Reset Demo DB
@@ -231,7 +231,7 @@ export default function AdminDashboardPage() {
 
           <button
             onClick={toggleRole}
-            className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-teal-500/20 border border-cyan-400/40 text-cyan-200 text-xs font-semibold hover:brightness-110 transition-all"
+            className="flex-1 sm:flex-initial px-3.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-teal-500/20 border border-cyan-400/40 text-cyan-200 text-xs font-semibold hover:brightness-110 transition-all text-center"
           >
             Switch to {isAdmin ? 'Customer' : 'Admin'} View
           </button>
@@ -338,7 +338,7 @@ export default function AdminDashboardPage() {
           {/* Table */}
           <div className="rounded-2xl glass-panel border border-cyan-500/20 overflow-hidden shadow-xl">
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs">
+              <table className="w-full text-left text-xs min-w-[760px]">
                 <thead className="bg-black/60 text-cyan-400 uppercase font-mono border-b border-cyan-500/20">
                   <tr>
                     <th className="p-4">Product</th>
@@ -448,7 +448,7 @@ export default function AdminDashboardPage() {
         <div className="space-y-4">
           <div className="rounded-2xl glass-panel border border-cyan-500/20 overflow-hidden shadow-xl">
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs">
+              <table className="w-full text-left text-xs min-w-[760px]">
                 <thead className="bg-black/60 text-cyan-400 uppercase font-mono border-b border-cyan-500/20">
                   <tr>
                     <th className="p-4">Order ID</th>
@@ -522,8 +522,8 @@ export default function AdminDashboardPage() {
 
       {/* CREATE / EDIT PRODUCT MODAL */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto animate-in fade-in">
-          <div className="relative w-full max-w-2xl rounded-3xl glass-panel border border-cyan-500/40 p-6 sm:p-8 space-y-6 text-white my-8 max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md overflow-y-auto animate-in fade-in">
+          <div className="relative w-full max-w-2xl rounded-3xl bg-[#020d1c] border border-cyan-400/50 p-5 sm:p-8 space-y-6 text-white my-4 sm:my-8 max-h-[92vh] overflow-y-auto shadow-2xl ring-1 ring-cyan-500/20">
             <div className="flex items-center justify-between pb-4 border-b border-cyan-500/20">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <Package className="w-5 h-5 text-cyan-400" />
@@ -631,7 +631,7 @@ export default function AdminDashboardPage() {
                   />
                 </div>
 
-                <div className="flex items-center gap-6 sm:col-span-2 pt-2">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 sm:col-span-2 pt-2">
                   <label className="flex items-center gap-2 cursor-pointer">
                     <input
                       type="checkbox"

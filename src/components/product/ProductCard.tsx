@@ -19,7 +19,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const isFavorited = isInWishlist(product.id);
 
   return (
-    <div className="group relative rounded-3xl glass-panel border border-cyan-500/20 overflow-hidden flex flex-col justify-between transition-all duration-500 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-950/80 hover:-translate-y-1.5">
+    <div className="group relative rounded-2xl sm:rounded-3xl glass-panel border border-cyan-500/20 overflow-hidden flex flex-col justify-between transition-all duration-500 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-950/80 hover:-translate-y-1.5">
       {/* Product Image Area */}
       <div className="relative w-full aspect-square bg-[#010814] overflow-hidden">
         <Link href={`/products/${product.slug}`} className="relative block w-full h-full">
@@ -81,7 +81,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Product Content Details */}
-      <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+      <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
         <div>
           {/* Category & Care Level */}
           <div className="flex items-center justify-between text-[11px] text-cyan-400/80 font-mono uppercase mb-1">
@@ -96,7 +96,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {/* Title */}
           <Link
             href={`/products/${product.slug}`}
-            className="block text-base font-bold text-white hover:text-cyan-300 transition-colors line-clamp-1"
+            className="block text-sm sm:text-base font-bold text-white hover:text-cyan-300 transition-colors line-clamp-1"
           >
             {product.name}
           </Link>

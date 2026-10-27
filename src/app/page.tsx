@@ -105,7 +105,7 @@ export default function HomePage() {
       {/* ======================================================== */}
       {/* 1. CINEMATIC 3D JELLYFISH HERO SECTION                  */}
       {/* ======================================================== */}
-      <section className="relative w-full h-screen min-h-[740px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-[640px] sm:min-h-[720px] lg:h-screen lg:min-h-[760px] flex items-center justify-center overflow-hidden pt-24 pb-16 lg:py-0">
         {/* Real-time 3D Three.js Jellyfish WebGL Canvas */}
         <div className="absolute inset-0 z-0">
           <JellyfishHeroScene />
@@ -133,7 +133,7 @@ export default function HomePage() {
             </div>
 
             {/* Headline - "Explore the Ocean at Home" */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.04] text-white">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[1.08] sm:leading-[1.04] text-white">
               Explore the{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-teal-300 to-emerald-400 text-glow-aqua">
                 Ocean
@@ -142,15 +142,15 @@ export default function HomePage() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-300/95 leading-relaxed font-light max-w-2xl">
+            <p className="text-sm sm:text-lg lg:text-xl text-gray-300/95 leading-relaxed font-light max-w-2xl">
               India&apos;s premier sanctuary for captive-bred exotic marine species, champion Bettas, Japanese ultra-clear rimless aquariums, and turnkey coral reef ecosystems.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
               <Link
                 href="/shop"
-                className="px-9 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 text-black font-extrabold text-sm tracking-wide hover:brightness-110 shadow-2xl shadow-cyan-500/40 transition-all flex items-center gap-2.5 group"
+                className="px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 text-black font-extrabold text-sm tracking-wide hover:brightness-110 shadow-2xl shadow-cyan-500/40 transition-all flex items-center justify-center gap-2.5 group text-center"
               >
                 Shop Now
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -158,7 +158,7 @@ export default function HomePage() {
 
               <Link
                 href="/shop?category=aquariums-and-fish-tanks"
-                className="px-8 py-4 rounded-2xl glass-panel border border-cyan-400/40 text-cyan-200 font-bold text-sm hover:bg-cyan-950/70 hover:border-cyan-400 transition-all flex items-center gap-2.5"
+                className="px-7 py-3.5 sm:py-4 rounded-2xl glass-panel border border-cyan-400/40 text-cyan-200 font-bold text-sm hover:bg-cyan-950/70 hover:border-cyan-400 transition-all flex items-center justify-center gap-2.5 text-center"
               >
                 <Waves className="w-4 h-4 text-cyan-400" />
                 Living Reef Tanks
@@ -166,18 +166,18 @@ export default function HomePage() {
             </div>
 
             {/* Trust Metrics Bar */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-cyan-500/20 max-w-xl">
+            <div className="grid grid-cols-3 gap-2 sm:gap-6 pt-6 sm:pt-8 border-t border-cyan-500/20 max-w-xl">
               <div>
-                <p className="text-2xl sm:text-3xl font-mono font-extrabold text-cyan-300">100%</p>
-                <p className="text-xs text-gray-400 mt-0.5">Live Arrival Guarantee</p>
+                <p className="text-xl sm:text-3xl font-mono font-extrabold text-cyan-300">100%</p>
+                <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5 leading-snug">Live Arrival Guarantee</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-mono font-extrabold text-teal-300">500+</p>
-                <p className="text-xs text-gray-400 mt-0.5">Rare Species Curated</p>
+                <p className="text-xl sm:text-3xl font-mono font-extrabold text-teal-300">500+</p>
+                <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5 leading-snug">Rare Species Curated</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-mono font-extrabold text-emerald-300">₹0</p>
-                <p className="text-xs text-gray-400 mt-0.5">Free Transit over ₹2,999</p>
+                <p className="text-xl sm:text-3xl font-mono font-extrabold text-emerald-300">₹0</p>
+                <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5 leading-snug">Free Transit over ₹2,999</p>
               </div>
             </div>
           </div>
@@ -195,8 +195,8 @@ export default function HomePage() {
       {/* ======================================================== */}
       {/* 2. LIVE ANNOUNCEMENT TICKER                             */}
       {/* ======================================================== */}
-      <div className="border-y border-cyan-500/20 bg-black/40 backdrop-blur-md py-4 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-cyan-300">
+      <div className="border-y border-cyan-500/20 bg-black/40 backdrop-blur-md py-3.5 sm:py-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:justify-between gap-3 sm:gap-4 text-xs font-mono text-cyan-300">
           <div className="flex items-center gap-2">
             <Shield className="w-4 h-4 text-cyan-400" />
             <span>Double-Bagged Pure Oxygen Packing</span>
@@ -219,35 +219,35 @@ export default function HomePage() {
       {/* ======================================================== */}
       {/* 3. FEATURED CATEGORIES                                  */}
       {/* ======================================================== */}
-      <section className="py-24 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <section className="py-16 sm:py-24 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12">
           <div>
             <div className="flex items-center gap-2 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-2">
               <Compass className="w-4 h-4" />
               <span>Biological Collections</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
               Curated Aquatic Categories
             </h2>
-            <p className="text-sm text-gray-400 mt-2 max-w-xl">
+            <p className="text-xs sm:text-sm text-gray-400 mt-2 max-w-xl">
               From majestic freshwater Discus to vibrant saltwater reef colonies and high-tech Japanese planted nature aquariums.
             </p>
           </div>
           <Link
             href="/shop"
-            className="text-sm font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 mt-4 md:mt-0 transition-colors"
+            className="text-xs sm:text-sm font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 mt-4 md:mt-0 transition-colors"
           >
             Explore All 16 Categories
             <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
           {INITIAL_CATEGORIES.slice(0, 8).map((cat) => (
             <Link
               key={cat.id}
               href={`/shop?category=${cat.slug}`}
-              className="group relative rounded-3xl overflow-hidden glass-panel border border-cyan-500/20 aspect-[4/5] flex flex-col justify-end p-5 sm:p-6 transition-all duration-500 hover:border-cyan-400/70 hover:shadow-2xl hover:shadow-cyan-950/80 hover:-translate-y-1.5"
+              className="group relative rounded-2xl sm:rounded-3xl overflow-hidden glass-panel border border-cyan-500/20 aspect-[4/5] flex flex-col justify-end p-3.5 sm:p-5 md:p-6 transition-all duration-500 hover:border-cyan-400/70 hover:shadow-2xl hover:shadow-cyan-950/80 hover:-translate-y-1.5"
             >
               <Image
                 src={cat.image}
@@ -258,14 +258,14 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#010814] via-[#010814]/60 to-transparent" />
 
-              <div className="relative z-10 space-y-1.5">
-                <span className="text-[11px] font-mono text-cyan-400 font-semibold block">
-                  {cat.itemCount} Curated Products
+              <div className="relative z-10 space-y-1">
+                <span className="text-[10px] sm:text-[11px] font-mono text-cyan-400 font-semibold block">
+                  {cat.itemCount} Products
                 </span>
-                <h3 className="text-base sm:text-xl font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug">
+                <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-white group-hover:text-cyan-300 transition-colors leading-tight">
                   {cat.name}
                 </h3>
-                <p className="text-xs text-gray-400 line-clamp-1 font-light">
+                <p className="text-[11px] sm:text-xs text-gray-400 line-clamp-1 font-light hidden sm:block">
                   {cat.description}
                 </p>
               </div>
@@ -325,19 +325,19 @@ export default function HomePage() {
       {/* ======================================================== */}
       {/* 6. FLASH DEALS WITH COUNTDOWN CLOCK                      */}
       {/* ======================================================== */}
-      <section className="py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl glass-panel-glow border border-cyan-400/40 p-8 sm:p-12 relative overflow-hidden shadow-2xl">
+      <section className="py-16 sm:py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl sm:rounded-3xl glass-panel-glow border border-cyan-400/40 p-5 sm:p-8 lg:p-12 relative overflow-hidden shadow-2xl">
           <div className="absolute -right-24 -bottom-24 w-96 h-96 bg-rose-500/15 rounded-full blur-[120px] pointer-events-none" />
 
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-10 pb-8 border-b border-cyan-500/20">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 mb-8 sm:mb-10 pb-6 sm:pb-8 border-b border-cyan-500/20">
             <div>
-              <span className="px-3.5 py-1 rounded-full bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-mono uppercase tracking-wider font-semibold">
+              <span className="px-3 py-1 rounded-full bg-rose-500/20 border border-rose-500/40 text-rose-300 text-[11px] sm:text-xs font-mono uppercase tracking-wider font-semibold">
                 ⚡ Limited Deep-Sea Offer
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white mt-3">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white mt-3">
                 Weekend Flash Sales & Livestock Specials
               </h2>
-              <p className="text-sm text-gray-300 mt-1 max-w-xl font-light">
+              <p className="text-xs sm:text-sm text-gray-300 mt-1 max-w-xl font-light">
                 Save up to 25% on exotic show bettas, rare Bucephalandra clumps, and complete aquascaping start packs.
               </p>
             </div>
@@ -345,26 +345,26 @@ export default function HomePage() {
             {/* Countdown Box */}
             <div className="flex items-center gap-3">
               <Clock className="w-5 h-5 text-rose-400 hidden sm:block" />
-              <div className="flex items-center gap-2">
-                <div className="px-4 py-2.5 rounded-2xl bg-black/70 border border-cyan-500/40 font-mono text-center">
-                  <span className="text-2xl font-bold text-cyan-300">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl bg-black/70 border border-cyan-500/40 font-mono text-center">
+                  <span className="text-xl sm:text-2xl font-bold text-cyan-300">
                     {String(timeLeft.hours).padStart(2, '0')}
                   </span>
-                  <span className="block text-[10px] text-gray-400">HOURS</span>
+                  <span className="block text-[9px] sm:text-[10px] text-gray-400">HOURS</span>
                 </div>
-                <span className="text-2xl font-bold text-cyan-400">:</span>
-                <div className="px-4 py-2.5 rounded-2xl bg-black/70 border border-cyan-500/40 font-mono text-center">
-                  <span className="text-2xl font-bold text-cyan-300">
+                <span className="text-xl sm:text-2xl font-bold text-cyan-400">:</span>
+                <div className="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl bg-black/70 border border-cyan-500/40 font-mono text-center">
+                  <span className="text-xl sm:text-2xl font-bold text-cyan-300">
                     {String(timeLeft.minutes).padStart(2, '0')}
                   </span>
-                  <span className="block text-[10px] text-gray-400">MINS</span>
+                  <span className="block text-[9px] sm:text-[10px] text-gray-400">MINS</span>
                 </div>
-                <span className="text-2xl font-bold text-cyan-400">:</span>
-                <div className="px-4 py-2.5 rounded-2xl bg-black/70 border border-cyan-500/40 font-mono text-center">
-                  <span className="text-2xl font-bold text-rose-400">
+                <span className="text-xl sm:text-2xl font-bold text-cyan-400">:</span>
+                <div className="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl bg-black/70 border border-cyan-500/40 font-mono text-center">
+                  <span className="text-xl sm:text-2xl font-bold text-rose-400">
                     {String(timeLeft.seconds).padStart(2, '0')}
                   </span>
-                  <span className="block text-[10px] text-gray-400">SECS</span>
+                  <span className="block text-[9px] sm:text-[10px] text-gray-400">SECS</span>
                 </div>
               </div>
             </div>
